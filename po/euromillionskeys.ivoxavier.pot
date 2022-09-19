@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: euromillionskeys.ivoxavier\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-19 14:59+0000\n"
+"POT-Creation-Date: 2022-09-19 15:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,19 +39,19 @@ msgstr ""
 msgid "EuroMillions Keys"
 msgstr ""
 
-#: ../qml/MainPage.qml:106
+#: ../qml/MainPage.qml:104
 msgid "Last Draw: "
 msgstr ""
 
-#: ../qml/MainPage.qml:127
+#: ../qml/MainPage.qml:125
 msgid "Total Winners & Prizes"
 msgstr ""
 
-#: ../qml/MainPage.qml:153
+#: ../qml/MainPage.qml:151
 msgid "Keys Generator"
 msgstr ""
 
-#: ../qml/MainPage.qml:189
+#: ../qml/MainPage.qml:187
 msgid "New"
 msgstr ""
 

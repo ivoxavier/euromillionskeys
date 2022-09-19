@@ -48,23 +48,12 @@ Page {
         StyleHints {
             backgroundColor:  "blue" 
         }
-        numberOfSlots: 2
+        numberOfSlots: 1
         actions: [  Action{
                         iconName: "info"
                        onTriggered: pageStack.push(aboutPage) 
                     }
                 ]
-        AbstractButton{
-           // anchors.right: parent.right
-            anchors.verticalCenter: parent.verticalCenter
-            ActivityIndicator{
-                id: activityIndicator
-                anchors.centerIn: parent
-                width: units.gu(2)
-                height: width 
-                running: false
-            }
-        }
     }
     
     }
@@ -94,6 +83,15 @@ Page {
             id: main_column
             width: root.width
 
+            ActivityIndicator{
+                id: activityIndicator
+                Layout.alignment: Qt.AlignCenter
+                width: units.gu(3)
+                height: width 
+                running: true
+            }
+
+            
             RowLayout{
                 Layout.alignment: Qt.AlignCenter
                 width: parent.width

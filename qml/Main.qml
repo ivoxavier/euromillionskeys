@@ -29,7 +29,7 @@ MainView {
     applicationName: 'euromillionskeys.ivoxavier'
     automaticOrientation: true
 
-    property var app_version : "1.0.0"
+    property var app_version : "1.0.1"
 
     width: units.gu(45)
     height: units.gu(75)
