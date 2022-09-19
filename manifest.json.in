@@ -1,0 +1,15 @@
+{
+    "name": "euromillionskeys.ivoxavier",
+    "description": "Collects EuroMillions Keys",
+    "architecture": "@CLICK_ARCH@",
+    "title": "EuroMillions Keys",
+    "hooks": {
+        "euromillionskeys": {
+            "apparmor": "euromillionskeys.apparmor",
+            "desktop":  "euromillionskeys.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Ivo Xavier <ivofernandes12@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

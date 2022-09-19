@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the euromillionskeys.ivoxavier package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: euromillionskeys.ivoxavier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-19 14:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../qml/AboutPage.qml:36
+msgid "About"
+msgstr ""
+
+#: ../qml/AboutPage.qml:84
+msgid "Version: "
+msgstr ""
+
+#: ../qml/AboutPage.qml:92
+msgid "Credits"
+msgstr ""
+
+#: ../qml/AboutPage.qml:99
+msgid ""
+"Results extracted from DOM of <a href='https://www.jogossantacasa.pt/web/"
+"SCCartazResult/'>%1</a>"
+msgstr ""
+
+#: ../qml/MainPage.qml:38 euromillionskeys.desktop.in.h:1
+msgid "EuroMillions Keys"
+msgstr ""
+
+#: ../qml/MainPage.qml:106
+msgid "Last Draw: "
+msgstr ""
+
+#: ../qml/MainPage.qml:127
+msgid "Total Winners & Prizes"
+msgstr ""
+
+#: ../qml/MainPage.qml:153
+msgid "Keys Generator"
+msgstr ""
+
+#: ../qml/MainPage.qml:189
+msgid "New"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:39
+msgid "<b>%1.º Prize:</b> "
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:42
+msgid "5 numbers + 2 starts"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:43
+msgid "5 numbers + 1 star"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:44
+msgid "5 numbers + 0 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:45
+msgid "4 numbers + 2 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:46
+msgid "4 numbers + 1 star"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:47
+msgid "3 numbers + 2 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:48
+msgid "4 numbers + 0 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:49
+msgid "2 numbers + 2 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:50
+msgid "3 numbers + 1 star"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:51
+msgid "3 numbers + 0 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:52
+msgid "1 number + 2 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:53
+msgid "2 numbers + 0 stars"
+msgstr ""
+
+#: ../qml/components/PrizeTable.qml:53
+msgid "2 numbers + 1 star"
+msgstr ""
