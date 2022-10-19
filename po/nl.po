@@ -1,0 +1,114 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the euromillionskeys.ivoxavier package.
+#
+# Heimen Stoffels <vistausss@fastmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: euromillionskeys.ivoxavier\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-19 15:11+0000\n"
+"PO-Revision-Date: 2022-09-20 19:42+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.1\n"
+
+#: ../qml/AboutPage.qml:36
+msgid "About"
+msgstr "Over"
+
+#: ../qml/AboutPage.qml:84
+msgid "Version: "
+msgstr "Versie: "
+
+#: ../qml/AboutPage.qml:92
+msgid "Credits"
+msgstr "Met dank aan"
+
+#: ../qml/AboutPage.qml:99
+msgid ""
+"Results extracted from DOM of <a href='https://www.jogossantacasa.pt/web/"
+"SCCartazResult/'>%1</a>"
+msgstr ""
+"De uitslagen zijn afkomstig van <a href='https://www.jogossantacasa.pt/web/SCC"
+"artazResult/'>%1</a>"
+
+#: ../qml/MainPage.qml:38 euromillionskeys.desktop.in.h:1
+msgid "EuroMillions Keys"
+msgstr "EuroMillions-uitslagen"
+
+#: ../qml/MainPage.qml:104
+msgid "Last Draw: "
+msgstr "Recentste trekking: "
+
+#: ../qml/MainPage.qml:125
+msgid "Total Winners & Prizes"
+msgstr "Totaal aantal winnaars en prijzen"
+
+#: ../qml/MainPage.qml:151
+msgid "Keys Generator"
+msgstr "Generator"
+
+#: ../qml/MainPage.qml:187
+msgid "New"
+msgstr "Nieuw"
+
+#: ../qml/components/PrizeTable.qml:39
+msgid "<b>%1.º Prize:</b> "
+msgstr "<b>%1.º prijs:</b> "
+
+#: ../qml/components/PrizeTable.qml:42
+msgid "5 numbers + 2 starts"
+msgstr "5 getallen + 2 sterren"
+
+#: ../qml/components/PrizeTable.qml:43
+msgid "5 numbers + 1 star"
+msgstr "5 getallen + 1 ster"
+
+#: ../qml/components/PrizeTable.qml:44
+msgid "5 numbers + 0 stars"
+msgstr "5 getallen + 0 sterren"
+
+#: ../qml/components/PrizeTable.qml:45
+msgid "4 numbers + 2 stars"
+msgstr "4 getallen + 2 sterren"
+
+#: ../qml/components/PrizeTable.qml:46
+msgid "4 numbers + 1 star"
+msgstr "4 getallen + 1 ster"
+
+#: ../qml/components/PrizeTable.qml:47
+msgid "3 numbers + 2 stars"
+msgstr "3 getallen + 2 sterren"
+
+#: ../qml/components/PrizeTable.qml:48
+msgid "4 numbers + 0 stars"
+msgstr "4 getallen + 0 sterren"
+
+#: ../qml/components/PrizeTable.qml:49
+msgid "2 numbers + 2 stars"
+msgstr "2 getallen + 2 sterren"
+
+#: ../qml/components/PrizeTable.qml:50
+msgid "3 numbers + 1 star"
+msgstr "3 getallen + 1 ster"
+
+#: ../qml/components/PrizeTable.qml:51
+msgid "3 numbers + 0 stars"
+msgstr "3 getallen + 0 sterren"
+
+#: ../qml/components/PrizeTable.qml:52
+msgid "1 number + 2 stars"
+msgstr "1 getal + 2 sterren"
+
+#: ../qml/components/PrizeTable.qml:53
+msgid "2 numbers + 0 stars"
+msgstr "2 getallen + 0 sterren"
+
+#: ../qml/components/PrizeTable.qml:53
+msgid "2 numbers + 1 star"
+msgstr "2 getallen + 1 ster"
