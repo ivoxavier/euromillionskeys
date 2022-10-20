@@ -62,7 +62,7 @@ Rectangle {
                 right: prizeTable.right
                 bottom: prizeTable.bottom
             }
-            model: mainpage.prizes_ListModel
+            model: euroMillionsPage.prizes_ListModel
         delegate: tablePrizeDelegate
         focus: false
     }
