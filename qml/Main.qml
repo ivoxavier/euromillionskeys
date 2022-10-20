@@ -29,7 +29,7 @@ MainView {
     applicationName: 'euromillionskeys.ivoxavier'
     automaticOrientation: true
 
-    property var app_version : "1.0.1"
+    property var app_version : "2.0.0"
 
     width: units.gu(45)
     height: units.gu(75)
@@ -45,8 +45,18 @@ MainView {
     }
 
     Component{
-        id:mainPage
-        MainPage{}
+        id:menuPage
+        MenuPage{}
+    }
+    
+    Component{
+        id:euroMillionsPage
+        EuroMillionsPage{}
+    }
+
+    Component{
+        id:m1lhaoPage
+        M1lhaoPage{}
     }
 
     Component{
@@ -60,9 +70,9 @@ MainView {
         if(appSettings.isCleanInstall){
             backend.call('main.create_dir', [], function(returnValue) {})
             appSettings.isCleanInstall = false
-            pageStack.push(mainPage)
+            pageStack.push(menuPage)
         }else{
-            pageStack.push(mainPage)
+            pageStack.push(menuPage)
         }
         
     }

@@ -25,13 +25,16 @@ import io.thp.pyotherside 1.4
 import "components"
 
 Page {
-    id: mainpage
-    objectName: "MainPage"
+    id: euroMillionsPage
+    objectName: "EuroMillionsPage"
 
     property var list_key_draw 
     property var list_key_gen
     property var data_draw
     property ListModel prizes_ListModel : ListModel{dynamicRoles: true}
+    property bool push_bottom_edge : false
+
+    
 
     header: PageHeader {
         id: header
@@ -198,13 +201,14 @@ Page {
     }
 
     Component.onCompleted:{
+        if(push_bottom_edge){bottom_edge.commit()}
         activityIndicator.running = true
-        backend.call('main.get_dom', [], function(returnValue) {})
-        backend.setHandler('dom_downloaded', function() {
+        backend.call('main.get_euromillions_dom', [], function(returnValue) {})
+        backend.setHandler('euromillions_dom_downloaded', function() {
             activityIndicator.running = false, activityIndicator.visible = false 
-            backend.call('main.get_date', [], function(returnValue) {data_draw = returnValue})
-            backend.call('main.get_key_draw', [], function(returnValue) {list_key_draw = returnValue})
-            backend.call('main.get_prizes', [], function(returnValue) {
+            backend.call('main.get_draw_date', ["euromillions"], function(returnValue) {data_draw = returnValue})
+            backend.call('main.get_euromillions_key', [], function(returnValue) {list_key_draw = returnValue})
+            backend.call('main.get_euromillions_prizes', [], function(returnValue) {
                 Object.entries(JSON.parse(returnValue)).forEach(([key,value]) => {
                     prizes_ListModel.append({total_wins: String(value).replace(","," - ")})
                 })

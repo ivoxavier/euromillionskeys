@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: euromillionskeys.ivoxavier\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-19 15:11+0000\n"
+"POT-Creation-Date: 2022-10-20 19:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,24 +35,36 @@ msgid ""
 "SCCartazResult/'>%1</a>"
 msgstr ""
 
-#: ../qml/MainPage.qml:38 euromillionskeys.desktop.in.h:1
+#: ../qml/EuroMillionsPage.qml:41 euromillionskeys.desktop.in.h:1
 msgid "EuroMillions Keys"
 msgstr ""
 
-#: ../qml/MainPage.qml:104
+#: ../qml/EuroMillionsPage.qml:107 ../qml/M1lhaoPage.qml:102
 msgid "Last Draw: "
 msgstr ""
 
-#: ../qml/MainPage.qml:125
+#: ../qml/EuroMillionsPage.qml:128
 msgid "Total Winners & Prizes"
 msgstr ""
 
-#: ../qml/MainPage.qml:151
+#: ../qml/EuroMillionsPage.qml:154
 msgid "Keys Generator"
 msgstr ""
 
-#: ../qml/MainPage.qml:187
+#: ../qml/EuroMillionsPage.qml:190
 msgid "New"
+msgstr ""
+
+#: ../qml/M1lhaoPage.qml:36 ../qml/MenuPage.qml:95
+msgid "M1llion"
+msgstr ""
+
+#: ../qml/MenuPage.qml:33
+msgid "Lotteries"
+msgstr ""
+
+#: ../qml/MenuPage.qml:85
+msgid "EuroMillions"
 msgstr ""
 
 #: ../qml/components/PrizeTable.qml:39
@@ -109,4 +121,12 @@ msgstr ""
 
 #: ../qml/components/PrizeTable.qml:53
 msgid "2 numbers + 1 star"
+msgstr ""
+
+#: ../qml/components/SlotBanner.qml:77
+msgid "RESULTS"
+msgstr ""
+
+#: ../qml/components/SlotBanner.qml:87
+msgid "GENERATE KEY"
 msgstr ""

@@ -25,22 +25,41 @@ from time import strftime
 from datetime import datetime
 from bs4 import BeautifulSoup
 
+global euromillions_dom
+euromillions_dom = "%s/euromillionskeys.ivoxavier/euromillions_dom.html" % os.environ["XDG_DATA_HOME"]
+
+global m1llion_dom
+m1llion_dom = "%s/euromillionskeys.ivoxavier/m1llion_dom.html" % os.environ["XDG_DATA_HOME"]
+
 global landing_zone
-landing_zone = "%s/euromillionskeys.ivoxavier/dom.html" % os.environ["XDG_DATA_HOME"]
+landing_zone = "%s/euromillionskeys.ivoxavier" % os.environ["XDG_DATA_HOME"]
 
 def create_dir():
         try:
-                os.mkdir("%s/euromillionskeys.ivoxavier" % os.environ["XDG_DATA_HOME"])
+                os.mkdir(landing_zone)
         except FileExistsError:
                 print("Directory already exists")
 
-def get_dom():
+def get_euromillions_dom():
         url = "https://www.jogossantacasa.pt/web/SCCartazResult/euroMilhoes"
-        urllib.request.urlretrieve(url, landing_zone) 
-        pyotherside.send('dom_downloaded')
+        urllib.request.urlretrieve(url, euromillions_dom) 
+        pyotherside.send('euromillions_dom_downloaded')
 
-def get_key_draw():
-    with codecs.open(landing_zone, 'r', encoding='utf-8', errors="ignore") as f:
+def get_m1llion_dom():
+        url = "https://www.jogossantacasa.pt/web/SCCartazResult/m1lhao"
+        urllib.request.urlretrieve(url, m1llion_dom) 
+        pyotherside.send('m1llion_dom_downloaded')
+
+def get_m1llion_key():
+    with codecs.open(m1llion_dom, 'r', encoding='utf-8', errors="ignore") as f:
+            soup = BeautifulSoup(f, 'html.parser')
+            main_div = (soup.find("div", {"class": "stripped betMiddle3 threecol regPad"}))
+            key = main_div.find("li",{"id":"code_m1"}).get_text()
+            print(key)
+    return key
+
+def get_euromillions_key():
+    with codecs.open(euromillions_dom, 'r', encoding='utf-8', errors="ignore") as f:
             soup = BeautifulSoup(f, 'html.parser')
             key_draw = (soup.find("div", {"class": "betMiddle twocol regPad"})
             .find("li").get_text()).split(" ")
@@ -48,8 +67,9 @@ def get_key_draw():
             del key_draw[5]
     return key_draw
 
-def get_date():
-        with codecs.open(landing_zone, 'r', encoding='utf-8', errors="ignore") as f:
+def get_draw_date(lotterie_type):
+        which_dom_file = euromillions_dom if lotterie_type == "euromillions" else m1llion_dom
+        with codecs.open(which_dom_file, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "bgCenter sendBtn betnow"}))
                 data_tag = main_div.find("span", {"class": "dataInfo"}).get_text()
@@ -60,8 +80,8 @@ def get_date():
                 .find("-")+1):]
                 .replace("/","-"), "%d-%m-%Y").timetuple())
 
-def get_prizes():
-        with codecs.open(landing_zone, 'r', encoding='utf-8', errors="ignore") as f:
+def get_euromillions_prizes():
+        with codecs.open(euromillions_dom, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "stripped betMiddle customfiveCol regPad"}))
                 jackpot_div = (soup.find("div", {"class": "betMiddle twocol"}))
