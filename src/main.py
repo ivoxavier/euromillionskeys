@@ -21,6 +21,7 @@ import pyotherside
 import re
 import json
 import random
+import glob
 from time import strftime
 from datetime import datetime
 from bs4 import BeautifulSoup
@@ -39,6 +40,11 @@ def create_dir():
                 os.mkdir(landing_zone)
         except FileExistsError:
                 print("Directory already exists")
+
+def clean_dir():
+        to_clean_path = glob.glob(landing_zone)
+        for files in to_clean_path:
+            os.remove(files)
 
 def get_euromillions_dom():
         url = "https://www.jogossantacasa.pt/web/SCCartazResult/euroMilhoes"

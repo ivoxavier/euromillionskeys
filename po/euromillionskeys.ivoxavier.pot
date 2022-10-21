@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: euromillionskeys.ivoxavier\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 19:40+0000\n"
+"POT-Creation-Date: 2022-10-21 13:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,15 +21,15 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: ../qml/AboutPage.qml:84
+#: ../qml/AboutPage.qml:85
 msgid "Version: "
 msgstr ""
 
-#: ../qml/AboutPage.qml:92
+#: ../qml/AboutPage.qml:93
 msgid "Credits"
 msgstr ""
 
-#: ../qml/AboutPage.qml:99
+#: ../qml/AboutPage.qml:100
 msgid ""
 "Results extracted from DOM of <a href='https://www.jogossantacasa.pt/web/"
 "SCCartazResult/'>%1</a>"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "New"
 msgstr ""
 
-#: ../qml/M1lhaoPage.qml:36 ../qml/MenuPage.qml:95
+#: ../qml/M1lhaoPage.qml:36 ../qml/MenuPage.qml:96
 msgid "M1llion"
 msgstr ""
 
@@ -63,8 +63,32 @@ msgstr ""
 msgid "Lotteries"
 msgstr ""
 
-#: ../qml/MenuPage.qml:85
+#: ../qml/MenuPage.qml:49 ../qml/SettingsPage.qml:33
+msgid "Settings"
+msgstr ""
+
+#: ../qml/MenuPage.qml:86
 msgid "EuroMillions"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:42
+msgid "Cleaned!"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:75
+msgid "Downloads"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:84
+msgid "DOM Files"
+msgstr ""
+
+#: ../qml/SettingsPage.qml:88
+msgid "Delete"
+msgstr ""
+
+#: ../qml/components/MessageDialog.qml:40
+msgid "Back"
 msgstr ""
 
 #: ../qml/components/PrizeTable.qml:39

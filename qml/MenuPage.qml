@@ -45,8 +45,9 @@ Page {
         }
         numberOfSlots: 1
         actions: [  Action{
-                        iconName: "info"
-                       onTriggered: pageStack.push(aboutPage) 
+                        iconName: "settings"
+                        text: i18n.tr("Settings")
+                       onTriggered: pageStack.push(settingsPage) 
                     }
                 ]
     }

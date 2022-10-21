@@ -35,6 +35,7 @@ Page{
     header: PageHeader {
         title: i18n.tr("About")
         StyleHints {
+            foregroundColor: "white"
             backgroundColor:  "blue" 
         }
     }
