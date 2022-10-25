@@ -45,8 +45,9 @@ Page {
         }
         numberOfSlots: 1
         actions: [  Action{
-                        iconName: "info"
-                       onTriggered: pageStack.push(aboutPage) 
+                        iconName: "settings"
+                        text: i18n.tr("Settings")
+                       onTriggered: pageStack.push(settingsPage) 
                     }
                 ]
     }
@@ -81,20 +82,30 @@ Page {
             BlankSpace{height:units.gu(2)}
 
             SlotBanner{
+                id:slot_euroMillions
                 game_banner: "../assets/euromillions_banner.svg"
                 game_name : i18n.tr("EuroMillions")
                 page_to_push : 0
                 multipe_options: true
+                Component.onCompleted: backend.call('main.next_draw_date', [2,5],
+                function(returnValue) {
+                    returnValue == true ?
+                    slot_euroMillions.next_draw_day = i18n.tr("Next Draw: Today") : slot_euroMillions.next_draw_day = i18n.tr("Next Draw: ") + returnValue})
             }
 
             
             BlankSpace{}
             
             SlotBanner{
+                id: slot_M1lhao
                 game_banner: "../assets/m1lhao.svg"
                 game_name : i18n.tr("M1llion")
                 page_to_push : 1
                 multipe_options: false
+                Component.onCompleted: backend.call('main.next_draw_date', [5],
+                function(returnValue) {
+                    returnValue == true ?
+                    slot_M1lhao.next_draw_day = i18n.tr("Next Draw: Today") : slot_M1lhao.next_draw_day = i18n.tr("Next Draw: ") + returnValue})
             }
 
             BlankSpace{}
@@ -102,7 +113,4 @@ Page {
         }
     }
 
-    Component.onCompleted:{
-        
-    }
 }

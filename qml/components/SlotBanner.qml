@@ -25,12 +25,13 @@ UbuntuShape{
 	id: outer_frame
 	Layout.alignment: Qt.AlignCenter
 	Layout.preferredWidth: root.width - units.gu(5)
-    Layout.preferredHeight: units.gu(13)
+    Layout.preferredHeight: units.gu(14)
 	color : "white"
 	radius: "large"
 
 	property int page_to_push : 0
 	property bool multipe_options
+	property var next_draw_day
 
 	//public API's	
 	property alias game_name : inner_shape.inner_shape_banner_text
@@ -39,7 +40,11 @@ UbuntuShape{
 	Column{  
 		width: parent.width
 		
-		//BlankSpace{}
+		Row{
+			anchors.horizontalCenter: parent.horizontalCenter
+			Text{text:next_draw_day}
+			
+		}
 
 		UbuntuShape{
 				id: inner_shape
@@ -51,12 +56,12 @@ UbuntuShape{
 				anchors.horizontalCenter: parent.horizontalCenter
 				
 				width: parent.width - units.gu(0.2)
-				height: units.gu(9)
+				height: units.gu(7)
 				aspect: UbuntuShape.Inset
 
 				Text{
 					id: banner_text
-					text: inner_shape.inner_shape_banner_text
+					text: i18n.tr("Next Draw: %1").arg(inner_shape.inner_shape_banner_text)
 					font.pixelSize: units.gu(2)
 					font.bold: true
 				}

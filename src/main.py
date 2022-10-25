@@ -21,8 +21,10 @@ import pyotherside
 import re
 import json
 import random
+import glob
+import calendar
 from time import strftime
-from datetime import datetime
+from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
 global euromillions_dom
@@ -39,6 +41,45 @@ def create_dir():
                 os.mkdir(landing_zone)
         except FileExistsError:
                 print("Directory already exists")
+
+def clean_dir():
+        to_clean_path = glob.glob(landing_zone)
+        for files in to_clean_path:
+            os.remove(files)
+
+def next_draw_date(draw_weekday1,draw_weekday2=None):
+        today_date_week_day = calendar.weekday(datetime.now().year, datetime.now().month, datetime.now().day) + 1
+        if draw_weekday2 is None:
+                #single day draw
+                is_draw_today = True if draw_weekday1 == today_date_week_day else False
+                if(is_draw_today):
+                        return 1
+                else:
+                        diff_days = draw_weekday1 - today_date_week_day
+                        if diff_days > 0:
+                                return ((datetime.today()) + timedelta(days=diff_days))\
+                                .strftime("%Y-%m-%d")
+                        else:
+                                return ((datetime.today()) + timedelta(days=(7-abs(diff_days))))\
+                                .strftime("%Y-%m-%d")
+        else:
+                #two day draw
+                is_draw_today = True if draw_weekday1 == today_date_week_day or draw_weekday2 == today_date_week_day else False
+                if(is_draw_today):
+                        return 1
+                else:
+                        list_weekdays = [draw_weekday1,draw_weekday2]
+                        for weekday in list_weekdays:
+                                diff_days = weekday - today_date_week_day
+                                if diff_days > 0 and today_date_week_day < 2 :
+                                        return ((datetime.today()) + timedelta(days=diff_days))\
+                                        .strftime("%Y-%m-%d")
+                                elif diff_days > 0 and today_date_week_day > 2:
+                                        return ((datetime.today()) + timedelta(days=diff_days))\
+                                        .strftime("%Y-%m-%d")
+                                else:
+                                        return ((datetime.today()) + timedelta(days=(4-abs(diff_days))))\
+                                        .strftime("%Y-%m-%d")
 
 def get_euromillions_dom():
         url = "https://www.jogossantacasa.pt/web/SCCartazResult/euroMilhoes"
