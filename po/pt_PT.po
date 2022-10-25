@@ -1,33 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the euromillionskeys.ivoxavier package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Ivo Xavier <ivofernandes12@gmail.com>, 2022.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: euromillionskeys.ivoxavier\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-25 13:46+0000\n"
+"POT-Creation-Date: 2022-10-24 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
+"Language-Team: pt_PT \n"
+"Language: pt_PT \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../qml/AboutPage.qml:36
 msgid "About"
-msgstr ""
+msgstr "Sobre"
 
 #: ../qml/AboutPage.qml:85
 msgid "Version: "
-msgstr ""
+msgstr "Versão: "
 
 #: ../qml/AboutPage.qml:93
 msgid "Credits"
-msgstr ""
+msgstr "Crédios"
 
 #: ../qml/AboutPage.qml:100
 msgid ""
@@ -37,132 +37,132 @@ msgstr ""
 
 #: ../qml/EuroMillionsPage.qml:41 euromillionskeys.desktop.in.h:1
 msgid "EuroMillions Keys"
-msgstr ""
+msgstr "Chaves do EuroMilhões"
 
 #: ../qml/EuroMillionsPage.qml:107 ../qml/M1lhaoPage.qml:102
 msgid "Last Draw: "
-msgstr ""
+msgstr "Último Sorteio: "
 
 #: ../qml/EuroMillionsPage.qml:128
 msgid "Total Winners & Prizes"
-msgstr ""
+msgstr "Total de Vencedores e Prémios"
 
 #: ../qml/EuroMillionsPage.qml:154
 msgid "Keys Generator"
-msgstr ""
+msgstr "Gerador de Chaves"
 
 #: ../qml/EuroMillionsPage.qml:190
 msgid "New"
-msgstr ""
+msgstr "Nova"
 
-#: ../qml/M1lhaoPage.qml:36 ../qml/MenuPage.qml:102
+#: ../qml/M1lhaoPage.qml:36 ../qml/MenuPage.qml:103
 msgid "M1llion"
-msgstr ""
+msgstr "Milhão"
 
 #: ../qml/MenuPage.qml:33
 msgid "Lotteries"
-msgstr ""
+msgstr "Lotarias"
 
 #: ../qml/MenuPage.qml:49 ../qml/SettingsPage.qml:33
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
 
 #: ../qml/MenuPage.qml:87
 msgid "EuroMillions"
-msgstr ""
+msgstr "EuroMilhões"
 
-#: ../qml/MenuPage.qml:93 ../qml/MenuPage.qml:108
+#: ../qml/MenuPage.qml:94 ../qml/MenuPage.qml:110
 msgid "Next Draw: "
-msgstr ""
+msgstr "Próximo Sorteio: "
 
-#: ../qml/MenuPage.qml:93 ../qml/MenuPage.qml:108
-msgid "Next Draw: Today"
-msgstr ""
+#: ../qml/MenuPage.qml:94 ../qml/MenuPage.qml:110
+msgid "Today"
+msgstr "Hoje"
 
 #: ../qml/SettingsPage.qml:42
 msgid "Cleaned!"
-msgstr ""
+msgstr "Limpo!"
 
 #: ../qml/SettingsPage.qml:75
 msgid "Downloads"
-msgstr ""
+msgstr "Transferências"
 
 #: ../qml/SettingsPage.qml:84
 msgid "DOM Files"
-msgstr ""
+msgstr "Ficheiros DOM"
 
 #: ../qml/SettingsPage.qml:88
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: ../qml/components/MessageDialog.qml:40
 msgid "Back"
-msgstr ""
+msgstr "Voltar"
 
 #: ../qml/components/PrizeTable.qml:39
 msgid "<b>%1.º Prize:</b> "
-msgstr ""
+msgstr "<b>%1.º Prémio:</b> "
 
 #: ../qml/components/PrizeTable.qml:42
 msgid "5 numbers + 2 starts"
-msgstr ""
+msgstr "5 números + 2 estrelas"
 
 #: ../qml/components/PrizeTable.qml:43
 msgid "5 numbers + 1 star"
-msgstr ""
+msgstr "5 números + 1 estrelas"
 
 #: ../qml/components/PrizeTable.qml:44
 msgid "5 numbers + 0 stars"
-msgstr ""
+msgstr "5 números + 0 estrelas"
 
 #: ../qml/components/PrizeTable.qml:45
 msgid "4 numbers + 2 stars"
-msgstr ""
+msgstr "4 números + 2 estrelas"
 
 #: ../qml/components/PrizeTable.qml:46
 msgid "4 numbers + 1 star"
-msgstr ""
+msgstr "4 números + 1 estrelas"
 
 #: ../qml/components/PrizeTable.qml:47
 msgid "3 numbers + 2 stars"
-msgstr ""
+msgstr "3 números + 2 estrelas"
 
 #: ../qml/components/PrizeTable.qml:48
 msgid "4 numbers + 0 stars"
-msgstr ""
+msgstr "4 números + 0 estrelas"
 
 #: ../qml/components/PrizeTable.qml:49
 msgid "2 numbers + 2 stars"
-msgstr ""
+msgstr "2 números + 2 estrelas"
 
 #: ../qml/components/PrizeTable.qml:50
 msgid "3 numbers + 1 star"
-msgstr ""
+msgstr "3 números + 1 estrelas"
 
 #: ../qml/components/PrizeTable.qml:51
 msgid "3 numbers + 0 stars"
-msgstr ""
+msgstr "3 números + 0 estrelas"
 
 #: ../qml/components/PrizeTable.qml:52
 msgid "1 number + 2 stars"
-msgstr ""
+msgstr "1 números + 2 estrelas"
 
 #: ../qml/components/PrizeTable.qml:53
 msgid "2 numbers + 0 stars"
-msgstr ""
+msgstr "2 números + 0 estrelas"
 
 #: ../qml/components/PrizeTable.qml:53
 msgid "2 numbers + 1 star"
-msgstr ""
+msgstr "2 números + 1 estrelas"
 
 #: ../qml/components/SlotBanner.qml:64
 msgid "Next Draw: %1"
-msgstr ""
+msgstr "Próximo Sorteio: %1"
 
 #: ../qml/components/SlotBanner.qml:82
 msgid "RESULTS"
-msgstr ""
+msgstr "RESULTADOS"
 
 #: ../qml/components/SlotBanner.qml:92
 msgid "GENERATE KEY"
-msgstr ""
+msgstr "GERAR CHAVE"
