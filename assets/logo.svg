@@ -23,9 +23,9 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      showguides="false"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="234.05234"
-     inkscape:cy="126.57211"
+     inkscape:zoom="1"
+     inkscape:cx="415"
+     inkscape:cy="343"
      inkscape:window-width="1920"
      inkscape:window-height="935"
      inkscape:window-x="0"
@@ -59,13 +59,12 @@
     </linearGradient>
   </defs>
   <rect
-     style="fill:#ffffff;fill-rule:evenodd;stroke-width:1"
+     style="fill:#ac9393;fill-rule:evenodd;stroke-width:1"
      id="rect5509"
      width="510.81967"
      height="510.58011"
      x="0.5425359"
-     y="1.2907733"
-     sodipodi:insensitive="true" />
+     y="1.2907733" />
   <path
      d="m-208.3 605.6c-7.842 0-14.55 5.029-17.32 12.19-0.0612-0.00067-0.1208 0-0.1823 0-7.088 0-12.83 6.002-12.83 13.41 0 7.404 5.746 13.41 12.83 13.41h17.5 16.33c5.155 0 9.333-4.365 9.333-9.75 0-4.543-2.974-8.363-7-9.445 0.001-0.1029 0-0.2015 0-0.3047 0-10.77-8.357-19.5-18.67-19.5z"
      style="stroke-width:4;color:#000000;stroke:#ccc;enable-background:accumulate;display:none;fill:#fff"
@@ -117,24 +116,21 @@
      cx="256.19568"
      cy="256.00385"
      rx="256.2005"
-     ry="255.99222"
-     sodipodi:insensitive="true" />
+     ry="255.99222" />
   <ellipse
      style="fill:#11002b;fill-rule:evenodd;stroke-width:0;stroke-linejoin:round;stroke-opacity:0.788633"
      id="path559"
      cx="254.50977"
      cy="253.58984"
      rx="136.91602"
-     ry="147.14844"
-     sodipodi:insensitive="true" />
+     ry="147.14844" />
   <ellipse
      style="fill:#ffffff;fill-rule:evenodd;stroke-width:0;stroke-linejoin:round;stroke-opacity:0.788633;enable-background:new"
      id="path559-3"
      cx="254.67786"
      cy="252.84473"
      rx="122.88879"
-     ry="132.93652"
-     sodipodi:insensitive="true" />
+     ry="132.93652" />
   <ellipse
      style="fill:#11002b;fill-rule:evenodd;stroke-width:0;stroke-linejoin:round;stroke-opacity:0.788633;enable-background:new"
      id="path559-6-56"
