@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.7
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 import QtQuick.Controls.Suru 2.2
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
@@ -28,7 +28,7 @@ Rectangle {
     id: wrapper
     width: prizeTable.width - units.gu(3)
     height: prizeTable.height - units.gu(14)
-    color: Suru.theme === 0 ? UbuntuColors.porcelain: "#111111"
+    color: Suru.theme === 0 ? LomiriColors.porcelain: "#111111"
 
         Component {
             id: tablePrizeDelegate

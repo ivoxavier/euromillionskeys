@@ -15,12 +15,12 @@
  */
 
 import QtQuick 2.9
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 //import QtQuick.Controls 2.2 as QQC2
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
-import Ubuntu.Components.ListItems 1.3 
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components.ListItems 1.3 
+import Lomiri.Components.Popups 1.3
 import QtQuick.Controls.Suru 2.2
 import io.thp.pyotherside 1.5
 import "components"
@@ -49,7 +49,7 @@ Page{
             right : parent.right
             bottom : parent.bottom
         }
-        color : Suru.theme === 0 ? UbuntuColor.porcelain : "#111111" 
+        color : Suru.theme === 0 ? LomiriColors.porcelain : "#111111" 
     }
 
     Flickable {
@@ -86,7 +86,7 @@ Page{
                 
                     Button{
                         text: i18n.tr("Delete")
-                        color: UbuntuColors.red
+                        color: LomiriColors.red
                         onClicked: backend.call('main.clean_dir', [], function(returnValue) {}), PopupUtils.open(clean_dialog)
                     }   
                 }

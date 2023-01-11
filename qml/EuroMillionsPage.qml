@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.12
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import QtQuick.Controls.Suru 2.2
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
@@ -68,7 +68,7 @@ Page {
             right : parent.right
             bottom : parent.bottom
         }
-        color : Suru.theme === 0 ? UbuntuColors.porcelain: "#111111"
+        color : Suru.theme === 0 ? LomiriColors.porcelain: "#111111"
     }  
 
     Flickable{
@@ -162,7 +162,7 @@ Page {
                     right : parent.right
                     bottom : parent.bottom
                 }
-                color : Suru.theme === 0 ? UbuntuColors.porcelain: "#111111"
+                color : Suru.theme === 0 ? LomiriColors.porcelain: "#111111"
          }  
 
             Flickable{

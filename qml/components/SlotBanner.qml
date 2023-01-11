@@ -15,13 +15,13 @@
  */
 
 import QtQuick 2.9
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 
 
-UbuntuShape{
+LomiriShape{
 	id: outer_frame
 	Layout.alignment: Qt.AlignCenter
 	Layout.preferredWidth: root.width - units.gu(5)
@@ -46,7 +46,7 @@ UbuntuShape{
 			
 		}
 
-		UbuntuShape{
+		LomiriShape{
 				id: inner_shape
 
 				//public API
@@ -57,7 +57,7 @@ UbuntuShape{
 				
 				width: parent.width - units.gu(0.2)
 				height: units.gu(7)
-				aspect: UbuntuShape.Inset
+				aspect: LomiriShape.Inset
 
 				Text{
 					id: banner_text
