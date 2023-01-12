@@ -15,10 +15,10 @@
  */
 
 import QtQuick 2.7
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components.Popups 1.3
 import Qt.labs.settings 1.0
 import io.thp.pyotherside 1.4
 import "components"
@@ -29,7 +29,7 @@ MainView {
     applicationName: 'euromillionskeys.ivoxavier'
     automaticOrientation: true
 
-    property var app_version : "2.1.0"
+    property var app_version : "2.1.1"
 
     width: units.gu(45)
     height: units.gu(75)
@@ -73,7 +73,7 @@ MainView {
     
     Component.onCompleted:{
         if(appSettings.isCleanInstall){
-            backend.call('main.create_dir', [], function(returnValue) {})
+            //backend.call('main.create_dir', [], function(returnValue) {})
             appSettings.isCleanInstall = false
             pageStack.push(menuPage)
         }else{

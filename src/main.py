@@ -1,5 +1,5 @@
 '''
- Copyright (C) 2022  Ivo Xavier
+ Copyright (C) 2022-2023  Ivo Xavier
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -22,28 +22,16 @@ import re
 import json
 import random
 import glob
+import glob_paths
 import calendar
+import ssl_context
+import requests
 from time import strftime
 from datetime import datetime, timedelta
 from bs4 import BeautifulSoup
 
-global euromillions_dom
-euromillions_dom = "%s/euromillionskeys.ivoxavier/euromillions_dom.html" % os.environ["XDG_DATA_HOME"]
-
-global m1llion_dom
-m1llion_dom = "%s/euromillionskeys.ivoxavier/m1llion_dom.html" % os.environ["XDG_DATA_HOME"]
-
-global landing_zone
-landing_zone = "%s/euromillionskeys.ivoxavier" % os.environ["XDG_DATA_HOME"]
-
-def create_dir():
-        try:
-                os.mkdir(landing_zone)
-        except FileExistsError:
-                print("Directory already exists")
-
 def clean_dir():
-        to_clean_path = glob.glob(landing_zone)
+        to_clean_path = glob.glob(glob_paths.LANDING_ZONE)
         for files in to_clean_path:
             os.remove(files)
 
@@ -76,6 +64,9 @@ def next_draw_date(draw_weekday1,draw_weekday2=None):
                                         .strftime("%Y-%m-%d")
                                 elif diff_days > 0 and today_date_week_day > 2:
                                         return ((datetime.today()) + timedelta(days=diff_days))\
+                                        .strftime("%Y-%m-%d")                                        
+                                elif diff_days < 0 and today_date_week_day < 5:
+                                        return ((datetime.today()) + timedelta(days=(3-abs(diff_days))))\
                                         .strftime("%Y-%m-%d")
                                 else:
                                         return ((datetime.today()) + timedelta(days=(4-abs(diff_days))))\
@@ -83,16 +74,20 @@ def next_draw_date(draw_weekday1,draw_weekday2=None):
 
 def get_euromillions_dom():
         url = "https://www.jogossantacasa.pt/web/SCCartazResult/euroMilhoes"
-        urllib.request.urlretrieve(url, euromillions_dom) 
+        with urllib.request.urlopen(url, context=ssl_context.CONTEXT) as u, \
+        codecs.open(glob_paths.EUROMILLIONS_DOM, 'wb') as f:
+                f.write(u.read())
         pyotherside.send('euromillions_dom_downloaded')
 
 def get_m1llion_dom():
         url = "https://www.jogossantacasa.pt/web/SCCartazResult/m1lhao"
-        urllib.request.urlretrieve(url, m1llion_dom) 
+        with urllib.request.urlopen(url, context=ssl_context.CONTEXT) as u, \
+        codecs.open(glob_paths.M1LLION_DOM, 'wb') as f:
+                f.write(u.read()) 
         pyotherside.send('m1llion_dom_downloaded')
 
 def get_m1llion_key():
-    with codecs.open(m1llion_dom, 'r', encoding='utf-8', errors="ignore") as f:
+    with codecs.open(glob_paths.M1LLION_DOM, 'r', encoding='utf-8', errors="ignore") as f:
             soup = BeautifulSoup(f, 'html.parser')
             main_div = (soup.find("div", {"class": "stripped betMiddle3 threecol regPad"}))
             key = main_div.find("li",{"id":"code_m1"}).get_text()
@@ -100,7 +95,7 @@ def get_m1llion_key():
     return key
 
 def get_euromillions_key():
-    with codecs.open(euromillions_dom, 'r', encoding='utf-8', errors="ignore") as f:
+    with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
             soup = BeautifulSoup(f, 'html.parser')
             key_draw = (soup.find("div", {"class": "betMiddle twocol regPad"})
             .find("li").get_text()).split(" ")
@@ -109,7 +104,7 @@ def get_euromillions_key():
     return key_draw
 
 def get_draw_date(lotterie_type):
-        which_dom_file = euromillions_dom if lotterie_type == "euromillions" else m1llion_dom
+        which_dom_file = glob_paths.EUROMILLIONS_DOM if lotterie_type == "euromillions" else glob_paths.M1LLION_DOM
         with codecs.open(which_dom_file, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "bgCenter sendBtn betnow"}))
@@ -122,7 +117,7 @@ def get_draw_date(lotterie_type):
                 .replace("/","-"), "%d-%m-%Y").timetuple())
 
 def get_euromillions_prizes():
-        with codecs.open(euromillions_dom, 'r', encoding='utf-8', errors="ignore") as f:
+        with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "stripped betMiddle customfiveCol regPad"}))
                 jackpot_div = (soup.find("div", {"class": "betMiddle twocol"}))

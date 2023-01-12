@@ -15,7 +15,7 @@
  */
 
 import QtQuick 2.9
-import Ubuntu.Components 1.3
+import Lomiri.Components 1.3
 //import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
@@ -34,7 +34,7 @@ AbstractButton {
 	opacity: 1.0//button.pressed ? 0.5 : (enabled ? 1 : 0.2)
     z: 100
 	Behavior on opacity {
-		UbuntuNumberAnimation { }
+		LomiriNumberAnimation { }
 	}
 
 	Rectangle {
