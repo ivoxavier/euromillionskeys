@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: euromillionskeys.ivoxavier\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-19 15:11+0000\n"
-"PO-Revision-Date: 2022-09-20 19:42+0200\n"
+"POT-Creation-Date: 2022-10-25 13:46+0000\n"
+"PO-Revision-Date: 2022-10-28 15:02+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -15,47 +15,91 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Poedit 3.2.1\n"
 
 #: ../qml/AboutPage.qml:36
 msgid "About"
 msgstr "Over"
 
-#: ../qml/AboutPage.qml:84
+#: ../qml/AboutPage.qml:85
 msgid "Version: "
 msgstr "Versie: "
 
-#: ../qml/AboutPage.qml:92
+#: ../qml/AboutPage.qml:93
 msgid "Credits"
 msgstr "Met dank aan"
 
-#: ../qml/AboutPage.qml:99
+#: ../qml/AboutPage.qml:100
 msgid ""
 "Results extracted from DOM of <a href='https://www.jogossantacasa.pt/web/"
 "SCCartazResult/'>%1</a>"
 msgstr ""
-"De uitslagen zijn afkomstig van <a href='https://www.jogossantacasa.pt/web/SCC"
-"artazResult/'>%1</a>"
+"De uitslagen zijn afkomstig van <a href='https://www.jogossantacasa.pt/web/"
+"SCCartazResult/'>%1</a>"
 
-#: ../qml/MainPage.qml:38 euromillionskeys.desktop.in.h:1
+#: ../qml/EuroMillionsPage.qml:41 euromillionskeys.desktop.in.h:1
 msgid "EuroMillions Keys"
 msgstr "EuroMillions-uitslagen"
 
-#: ../qml/MainPage.qml:104
+#: ../qml/EuroMillionsPage.qml:107 ../qml/M1lhaoPage.qml:102
 msgid "Last Draw: "
 msgstr "Recentste trekking: "
 
-#: ../qml/MainPage.qml:125
+#: ../qml/EuroMillionsPage.qml:128
 msgid "Total Winners & Prizes"
 msgstr "Totaal aantal winnaars en prijzen"
 
-#: ../qml/MainPage.qml:151
+#: ../qml/EuroMillionsPage.qml:154
 msgid "Keys Generator"
 msgstr "Generator"
 
-#: ../qml/MainPage.qml:187
+#: ../qml/EuroMillionsPage.qml:190
 msgid "New"
 msgstr "Nieuw"
+
+#: ../qml/M1lhaoPage.qml:36 ../qml/MenuPage.qml:102
+msgid "M1llion"
+msgstr "M1llion"
+
+#: ../qml/MenuPage.qml:33
+msgid "Lotteries"
+msgstr "Loterijen"
+
+#: ../qml/MenuPage.qml:49 ../qml/SettingsPage.qml:33
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../qml/MenuPage.qml:87
+msgid "EuroMillions"
+msgstr "EuroMillions"
+
+#: ../qml/MenuPage.qml:93 ../qml/MenuPage.qml:108
+msgid "Next Draw: "
+msgstr "Volgende trekking: "
+
+#: ../qml/MenuPage.qml:93 ../qml/MenuPage.qml:108
+msgid "Next Draw: Today"
+msgstr "Volgende trekking: vandaag"
+
+#: ../qml/SettingsPage.qml:42
+msgid "Cleaned!"
+msgstr "Opgeruimd staat netjes!"
+
+#: ../qml/SettingsPage.qml:75
+msgid "Downloads"
+msgstr "Downloads"
+
+#: ../qml/SettingsPage.qml:84
+msgid "DOM Files"
+msgstr "DOM-bestanden"
+
+#: ../qml/SettingsPage.qml:88
+msgid "Delete"
+msgstr "Wissen"
+
+#: ../qml/components/MessageDialog.qml:40
+msgid "Back"
+msgstr "Terug"
 
 #: ../qml/components/PrizeTable.qml:39
 msgid "<b>%1.º Prize:</b> "
@@ -112,3 +156,15 @@ msgstr "2 getallen + 0 sterren"
 #: ../qml/components/PrizeTable.qml:53
 msgid "2 numbers + 1 star"
 msgstr "2 getallen + 1 ster"
+
+#: ../qml/components/SlotBanner.qml:64
+msgid "Next Draw: %1"
+msgstr "Volgende trekking: %1"
+
+#: ../qml/components/SlotBanner.qml:82
+msgid "RESULTS"
+msgstr "UITSLAGEN"
+
+#: ../qml/components/SlotBanner.qml:92
+msgid "GENERATE KEY"
+msgstr "SLEUTEL GENEREREN"
