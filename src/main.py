@@ -89,9 +89,7 @@ def get_m1llion_key():
     with codecs.open(glob_paths.M1LLION_DOM, 'r', encoding='utf-8', errors="ignore") as f:
             soup = BeautifulSoup(f, 'html.parser')
             main_div = (soup.find("div", {"class": "stripped betMiddle3 threecol regPad"}))
-            key = main_div.find("li",{"id":"code_m1"}).get_text()
-            print(key)
-    return key
+            return main_div.find("li",{"id":"code_m1"}).get_text() 
 
 def get_euromillions_key():
     with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
