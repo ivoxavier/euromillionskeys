@@ -115,11 +115,10 @@ def get_draw_date(lotterie_type):
         with codecs.open(which_dom_file, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "bgCenter sendBtn betnow"}))
-                data_tag = main_div.find("span", {"class": "dataInfo"}).get_text()
-                data_no_tag = re.sub('\s+', '', data_tag)
-                data_cleaned = data_no_tag[data_no_tag.find("DatadoSorteio"):]
+                sub_div = re.sub('\s+','',main_div.find("span", {"class": "dataInfo"}).get_text())
+                draw_data = sub_div[sub_div.find("DatadoSorteio"):]
                 #We need this for data in this format to store in database
-                return strftime("%Y-%m-%d", datetime.strptime(data_cleaned[(data_cleaned
+                return strftime("%Y-%m-%d", datetime.strptime(draw_data[(draw_data
                 .find("-")+1):]
                 .replace("/","-"), "%d-%m-%Y").timetuple())
 
