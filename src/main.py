@@ -120,6 +120,15 @@ def get_draw_date(lotterie_type):
                 .find("-")+1):]
                 .replace("/","-"), "%d-%m-%Y").timetuple())
 
+def get_jackpot():
+        with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
+                soup = BeautifulSoup(f, 'html.parser')
+                main_div = (soup.find("div",{"class": "betMiddle twocol"}))
+                jackpot = ""
+                for i in main_div.find_all("li",{"class": "stronger"}):
+                        jackpot = "".join(re.sub('\s+', '', i.get_text()))
+                return jackpot
+
 def get_euromillions_prizes():
         with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
