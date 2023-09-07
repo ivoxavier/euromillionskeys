@@ -23,39 +23,48 @@ import Qt.labs.settings 1.0
 
 RowLayout{
 	id: wrapper
-	Layout.alignment: Qt.AlignCenter
-	width: parent.width
+	
+	//width: parent.width
 	spacing: units.gu(0.2)
 
 	property bool draw_key
 
+	// Check if list_key_draw and list_key_gen are defined and have enough elements
+    function getKeyAtIndex(index) {
+        if (wrapper.draw_key) {
+            return list_key_draw && list_key_draw.length > index ? list_key_draw[index] : "";
+        } else {
+            return list_key_gen && list_key_gen.length > index ? list_key_gen[index] : "";
+        }
+    }
+
 	Circle{
-		digit_label: wrapper.draw_key ? list_key_draw[0] : list_key_gen[0]
-		shape_color: "blue"
+		digit_label.text: getKeyAtIndex(0)
+		shape_color: LomiriColors.ash
 		digit_label_color: "white"
 	}     
 
 	Circle{
-		digit_label: wrapper.draw_key ? list_key_draw[1] : list_key_gen[1]
-		shape_color: "blue"
+		digit_label.text: getKeyAtIndex(1)
+		shape_color: LomiriColors.ash
 		digit_label_color: "white"
 	} 
 
 	Circle{
-		digit_label: wrapper.draw_key ? list_key_draw[2] : list_key_gen[2]
-		shape_color: "blue"
+		digit_label.text: getKeyAtIndex(2)
+		shape_color: LomiriColors.ash
 		digit_label_color: "white"
 	}     
 	
 	Circle{
-		digit_label: wrapper.draw_key ? list_key_draw[3] : list_key_gen[3]
-		shape_color: "blue"
+		digit_label.text: getKeyAtIndex(3)
+		shape_color: LomiriColors.ash
 		digit_label_color: "white"
 	}  
 
 	Circle{
-		digit_label: wrapper.draw_key ? list_key_draw[4] : list_key_gen[4]
-		shape_color: "blue"
+		digit_label.text: getKeyAtIndex(4)
+		shape_color: LomiriColors.ash
 		digit_label_color: "white"
 	}
 
@@ -66,16 +75,15 @@ RowLayout{
 	}
 
 	Circle{
-		digit_label: wrapper.draw_key ? list_key_draw[5] : list_key_gen[5]
-		shape_color: "#e7d30b"
-		digit_label_color: "black"
+		digit_label.text: getKeyAtIndex(5)
+		shape_color: LomiriColors.purple
+		digit_label_color: "white"
 	}   
 
 	Circle{
-		digit_label: wrapper.draw_key ? list_key_draw[6] : list_key_gen[6]
-		shape_color: "#e7d30b"
-		digit_label_color: "black"
-
+		digit_label.text: getKeyAtIndex(6)
+		shape_color: LomiriColors.purple
+		digit_label_color: "white"
 	} 
 
 	   
