@@ -24,13 +24,13 @@ AbstractButton {
 	id: button
 
     //public api
-	property alias digit_label: digit_label.text
+	property alias digit_label: digit_label
 	property alias digit_label_color: digit_label.color
     property alias shape_color: shape.color
 	
 
-	width: units.gu(6)
-	height: units.gu(6)
+	width: units.gu(5)
+	height: units.gu(5)
 	opacity: 1.0//button.pressed ? 0.5 : (enabled ? 1 : 0.2)
     z: 100
 	Behavior on opacity {
