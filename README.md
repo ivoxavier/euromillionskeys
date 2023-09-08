@@ -4,8 +4,6 @@ Collects EuroMillions Keys
 
 It downloads the html page from: https://www.jogossantacasa.pt/web/SCCartazResult/
 
-## Logo
-<a target="_blank" href="https://www.svgrepo.com/svg/34405/key">key-svgrepo-com</a> icon by <a target="_blank" href="https://www.svgrepo.com/">svgrepo</a>
 
 ## License
 
