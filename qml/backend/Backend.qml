@@ -27,7 +27,7 @@ Python {
     id: python
 
     Component.onCompleted: {
-        addImportPath(Qt.resolvedUrl('../src/'));
+        addImportPath(Qt.resolvedUrl('../../src/'));
 
         importModule('main', function() {
             console.log('module imported');

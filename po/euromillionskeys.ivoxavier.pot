@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: euromillionskeys.ivoxavier\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-11 18:49+0000\n"
+"POT-Creation-Date: 2023-09-08 11:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,141 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../qml/AboutPage.qml:36
-msgid "About"
+#: ../qml/Main.qml:58
+msgid "No Network. Please enable it and restart the app!"
 msgstr ""
 
-#: ../qml/AboutPage.qml:85
-msgid "Version: "
+#: ../qml/components/MessageDialog.qml:41
+msgid "Close"
 msgstr ""
 
-#: ../qml/AboutPage.qml:93
-msgid "Credits"
-msgstr ""
-
-#: ../qml/AboutPage.qml:100
-msgid ""
-"Results extracted from DOM of <a href='https://www.jogossantacasa.pt/web/"
-"SCCartazResult/'>%1</a>"
-msgstr ""
-
-#: ../qml/EuroMillionsPage.qml:41 euromillionskeys.desktop.in.h:1
-msgid "EuroMillions Keys"
-msgstr ""
-
-#: ../qml/EuroMillionsPage.qml:107 ../qml/M1lhaoPage.qml:102
-msgid "Last Draw: "
-msgstr ""
-
-#: ../qml/EuroMillionsPage.qml:128
-msgid "Total Winners & Prizes"
-msgstr ""
-
-#: ../qml/EuroMillionsPage.qml:154
-msgid "Keys Generator"
-msgstr ""
-
-#: ../qml/EuroMillionsPage.qml:190
-msgid "New"
-msgstr ""
-
-#: ../qml/M1lhaoPage.qml:36 ../qml/MenuPage.qml:102
-msgid "M1llion"
-msgstr ""
-
-#: ../qml/MenuPage.qml:33
-msgid "Lotteries"
-msgstr ""
-
-#: ../qml/MenuPage.qml:49 ../qml/SettingsPage.qml:33
-msgid "Settings"
-msgstr ""
-
-#: ../qml/MenuPage.qml:87
-msgid "EuroMillions"
-msgstr ""
-
-#: ../qml/MenuPage.qml:93 ../qml/MenuPage.qml:108
-msgid "Next Draw: "
-msgstr ""
-
-#: ../qml/MenuPage.qml:93 ../qml/MenuPage.qml:108
-msgid "Next Draw: Today"
-msgstr ""
-
-#: ../qml/SettingsPage.qml:42
-msgid "Cleaned!"
-msgstr ""
-
-#: ../qml/SettingsPage.qml:75
-msgid "Downloads"
-msgstr ""
-
-#: ../qml/SettingsPage.qml:84
-msgid "DOM Files"
-msgstr ""
-
-#: ../qml/SettingsPage.qml:88
-msgid "Delete"
-msgstr ""
-
-#: ../qml/components/MessageDialog.qml:40
-msgid "Back"
-msgstr ""
-
-#: ../qml/components/PrizeTable.qml:39
+#: ../qml/components/PrizeTable.qml:36
 msgid "<b>%1.º Prize:</b> "
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:42
+#: ../qml/components/PrizeTable.qml:39
 msgid "5 numbers + 2 starts"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:43
+#: ../qml/components/PrizeTable.qml:40
 msgid "5 numbers + 1 star"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:44
+#: ../qml/components/PrizeTable.qml:41
 msgid "5 numbers + 0 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:45
+#: ../qml/components/PrizeTable.qml:42
 msgid "4 numbers + 2 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:46
+#: ../qml/components/PrizeTable.qml:43
 msgid "4 numbers + 1 star"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:47
+#: ../qml/components/PrizeTable.qml:44
 msgid "3 numbers + 2 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:48
+#: ../qml/components/PrizeTable.qml:45
 msgid "4 numbers + 0 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:49
+#: ../qml/components/PrizeTable.qml:46
 msgid "2 numbers + 2 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:50
+#: ../qml/components/PrizeTable.qml:47
 msgid "3 numbers + 1 star"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:51
+#: ../qml/components/PrizeTable.qml:48
 msgid "3 numbers + 0 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:52
+#: ../qml/components/PrizeTable.qml:49
 msgid "1 number + 2 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:53
+#: ../qml/components/PrizeTable.qml:50
 msgid "2 numbers + 0 stars"
 msgstr ""
 
-#: ../qml/components/PrizeTable.qml:53
+#: ../qml/components/PrizeTable.qml:50
 msgid "2 numbers + 1 star"
 msgstr ""
 
@@ -165,4 +91,71 @@ msgstr ""
 
 #: ../qml/components/SlotBanner.qml:92
 msgid "GENERATE KEY"
+msgstr ""
+
+#: ../qml/components/SlotEuroMillionsInfo.qml:50
+msgid "Next's Draws"
+msgstr ""
+
+#: ../qml/components/SlotEuroMillionsInfo.qml:64
+msgid "EuroMillions:"
+msgstr ""
+
+#: ../qml/components/SlotEuroMillionsKeys.qml:49
+msgid "EuroMillions"
+msgstr ""
+
+#: ../qml/components/SlotEuroMillionsKeys.qml:95
+#: ../qml/components/SlotM1lhao.qml:110
+msgid "Jackpot:"
+msgstr ""
+
+#: ../qml/lotteries/EuroMillions.qml:72
+msgid "EuroMillions Winners & Prizes"
+msgstr ""
+
+#: ../qml/lotteries/EuroMillions.qml:98
+msgid "EuroMillions Key Generator"
+msgstr ""
+
+#: ../qml/lotteries/EuroMillions.qml:142 ../qml/lotteries/EuroMillions.qml:146
+msgid "Today"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:33
+msgid "Settings"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:42
+msgid "Cleaned!"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:76
+msgid "Version: "
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:86
+msgid "Credits"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:93
+msgid ""
+"Results extracted from DOM of <a href='https://www.jogossantacasa.pt/web/"
+"SCCartazResult/'>%1</a>"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:100
+msgid "Downloads"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:109
+msgid "DOM Files"
+msgstr ""
+
+#: ../qml/pages/SettingsPage.qml:113
+msgid "Delete"
+msgstr ""
+
+#: euromillionskeys.desktop.in.h:1
+msgid "EuroMillions Keys"
 msgstr ""

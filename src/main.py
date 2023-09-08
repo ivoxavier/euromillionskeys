@@ -90,9 +90,7 @@ def get_m1llion_key():
     with codecs.open(glob_paths.M1LLION_DOM, 'r', encoding='utf-8', errors="ignore") as f:
             soup = BeautifulSoup(f, 'html.parser')
             main_div = (soup.find("div", {"class": "stripped betMiddle3 threecol regPad"}))
-            key = main_div.find("li",{"id":"code_m1"}).get_text()
-            print(key)
-    return key
+            return main_div.find("li",{"id":"code_m1"}).get_text() 
 
 def get_euromillions_key():
     with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
@@ -103,18 +101,34 @@ def get_euromillions_key():
             del key_draw[5]
     return key_draw
 
+def get_draw_n(lotterie_type):
+        which_dom_file = glob_paths.EUROMILLIONS_DOM if lotterie_type == "euromillions" else glob_paths.M1LLION_DOM
+        with codecs.open(which_dom_file, 'r', encoding='utf-8', errors="ignore") as f:
+                soup = BeautifulSoup(f, 'html.parser')
+                main_div = (soup.find("div", {"class": "bgCenter sendBtn betnow"}))
+                sub_div = re.sub('\s+','',main_div.find("span", {"class": "dataInfo"}).get_text())
+                return sub_div[sub_div[sub_div.find("Sorteio:"):16].find(":")-(-1):16].strip()
+
 def get_draw_date(lotterie_type):
         which_dom_file = glob_paths.EUROMILLIONS_DOM if lotterie_type == "euromillions" else glob_paths.M1LLION_DOM
         with codecs.open(which_dom_file, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "bgCenter sendBtn betnow"}))
-                data_tag = main_div.find("span", {"class": "dataInfo"}).get_text()
-                data_no_tag = re.sub('\s+', '', data_tag)
-                data_cleaned = data_no_tag[data_no_tag.find("DatadoSorteio"):]
+                sub_div = re.sub('\s+','',main_div.find("span", {"class": "dataInfo"}).get_text())
+                draw_data = sub_div[sub_div.find("DatadoSorteio"):]
                 #We need this for data in this format to store in database
-                return strftime("%Y-%m-%d", datetime.strptime(data_cleaned[(data_cleaned
+                return strftime("%Y-%m-%d", datetime.strptime(draw_data[(draw_data
                 .find("-")+1):]
                 .replace("/","-"), "%d-%m-%Y").timetuple())
+
+def get_jackpot():
+        with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
+                soup = BeautifulSoup(f, 'html.parser')
+                main_div = (soup.find("div",{"class": "betMiddle twocol"}))
+                jackpot = ""
+                for i in main_div.find_all("li",{"class": "stronger"}):
+                        jackpot = "".join(re.sub('\s+', '', i.get_text()))
+                return jackpot
 
 def get_euromillions_prizes():
         with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
