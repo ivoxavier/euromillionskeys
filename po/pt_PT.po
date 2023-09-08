@@ -27,14 +27,14 @@ msgstr "Versão: "
 
 #: ../qml/AboutPage.qml:93
 msgid "Credits"
-msgstr "Crédios"
+msgstr "Créditos"
 
 #: ../qml/AboutPage.qml:100
 msgid ""
 "Results extracted from DOM of <a href='https://www.jogossantacasa.pt/web/"
 "SCCartazResult/'>%1</a>"
-msgstr ""
-
+msgstr "Informação extraída de <a href='https://www.jogossantacasa.pt/web/"
+"SCCartazResult/'>%1</a>"
 #: ../qml/EuroMillionsPage.qml:41 euromillionskeys.desktop.in.h:1
 msgid "EuroMillions Keys"
 msgstr "Chaves do EuroMilhões"
@@ -67,9 +67,6 @@ msgstr "Lotarias"
 msgid "Settings"
 msgstr "Definições"
 
-#: ../qml/MenuPage.qml:87
-msgid "EuroMillions"
-msgstr "EuroMilhões"
 
 #: ../qml/MenuPage.qml:94 ../qml/MenuPage.qml:110
 msgid "Next Draw: "
@@ -166,3 +163,24 @@ msgstr "RESULTADOS"
 #: ../qml/components/SlotBanner.qml:92
 msgid "GENERATE KEY"
 msgstr "GERAR CHAVE"
+
+#: ../qml/components/SlotEuroMillionsKeys.qml:49
+msgid "EuroMillions"
+msgstr "EuroMilhões"
+
+#: ../qml/components/SlotEuroMillionsKeys.qml:95
+#: ../qml/components/SlotM1lhao.qml:110
+msgid "Jackpot:"
+msgstr "Jackpot:"
+
+#: ../qml/lotteries/EuroMillions.qml:72
+msgid "EuroMillions Winners & Prizes"
+msgstr "Vencedores e Prémios EuroMilhões"
+
+#: ../qml/lotteries/EuroMillions.qml:98
+msgid "EuroMillions Key Generator"
+msgstr "Gerador de Chaves do EuroMilhões"
+
+#: ../qml/components/SlotEuroMillionsInfo.qml:50
+msgid "Next's Draws"
+msgstr "Próximos Sorteios"
