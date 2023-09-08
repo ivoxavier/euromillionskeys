@@ -22,19 +22,26 @@ import Lomiri.Components.Popups 1.3
 import Qt.labs.settings 1.0
 import io.thp.pyotherside 1.4
 import "components"
+import "backend"
+import "pages"
+import "settings"
+import "lotteries"
 
 MainView {
     id: root
     objectName: 'mainView'
     applicationName: 'euromillionskeys.ivoxavier'
     automaticOrientation: true
+    backgroundColor : LomiriColors.porcelain
 
-    property var app_version : "2.1.1"
+    property var app_version : "3.0.0"
 
     width: units.gu(45)
     height: units.gu(75)
 
     AppSettings{id: appSettings}
+    
+    ConnectionChecker{id:connChecker}
     
     PageStack {
         id: pageStack
@@ -44,25 +51,19 @@ MainView {
         }
     }
 
+    //message confirming the ingestion on bottom 
     Component{
-        id:menuPage
-        MenuPage{}
+        id: noNetwrokDialog
+        MessageDialog{
+            msg: i18n.tr("No Network. Please enable it and restart the app!")
+        }
+    }
+
+    Component{
+        id:lotteryGames
+        LotteryGamesPage{}
     }
     
-    Component{
-        id:euroMillionsPage
-        EuroMillionsPage{}
-    }
-
-    Component{
-        id:m1lhaoPage
-        M1lhaoPage{}
-    }
-
-    Component{
-        id:aboutPage
-        AboutPage{}
-    }
 
     Component{
         id:settingsPage
@@ -73,11 +74,10 @@ MainView {
     
     Component.onCompleted:{
         if(appSettings.isCleanInstall){
-            //backend.call('main.create_dir', [], function(returnValue) {})
             appSettings.isCleanInstall = false
-            pageStack.push(menuPage)
+            pageStack.push(lotteryGames)
         }else{
-            pageStack.push(menuPage)
+            pageStack.push(lotteryGames)
         }
         
     }

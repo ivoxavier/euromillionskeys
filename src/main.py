@@ -101,8 +101,9 @@ def get_euromillions_key():
             del key_draw[5]
     return key_draw
 
-def get_draw_n():
-        with codecs.open(glob_paths.EUROMILLIONS_DOM, 'r', encoding='utf-8', errors="ignore") as f:
+def get_draw_n(lotterie_type):
+        which_dom_file = glob_paths.EUROMILLIONS_DOM if lotterie_type == "euromillions" else glob_paths.M1LLION_DOM
+        with codecs.open(which_dom_file, 'r', encoding='utf-8', errors="ignore") as f:
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "bgCenter sendBtn betnow"}))
                 sub_div = re.sub('\s+','',main_div.find("span", {"class": "dataInfo"}).get_text())

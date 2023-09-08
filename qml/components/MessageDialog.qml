@@ -5,7 +5,7 @@
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * euromillionsKeys is distributed in the hope that it will be useful,
+ * kaltracker is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -19,6 +19,7 @@ import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Suru 2.2
+//import "../style"
 
 Dialog {
     id: msg_dialog
@@ -33,11 +34,11 @@ Dialog {
         width: parent.width
         wrapMode: Text.Wrap;
         horizontalAlignment: Text.AlignJustify    
-        color : Suru.theme === 0 ?"black" : "white" 
+        //color : app_style.label.labelColor  
     }
     
     Button {
-        text: i18n.tr("Back")
+        text: i18n.tr("Close")
         onClicked:{
             PopupUtils.close(msg_dialog)
         } 

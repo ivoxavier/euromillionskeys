@@ -23,22 +23,19 @@ import Qt.labs.settings 1.0
 import io.thp.pyotherside 1.4
 
 
-
-Rectangle {
+LomiriShape {
     id: wrapper
-    width: prizeTable.width - units.gu(3)
-    height: prizeTable.height - units.gu(14)
-    color: Suru.theme === 0 ? LomiriColors.porcelain: "#111111"
+    color: LomiriColors.porcelain
+    aspect: LomiriShape.Flat
 
         Component {
             id: tablePrizeDelegate
             Item { 
-                width: wrapper.width
-                height: units.gu(4.3)
-                Column {
-                    Label { text: i18n.tr('<b>%1.º Prize:</b> ').arg(index+1) + total_wins }
+                height: units.gu(6)
+                ColumnLayout {
+                    Label { text: i18n.tr('<b>%1.º Prize:</b> ').arg(index+1) + total_wins;font.pixelSize: units.gu(2) }
                     Label {
-                        font.pixelSize: units.gu(1.3)
+                        font.pixelSize: units.gu(1.5)
                         text: index == 0 ? i18n.tr('5 numbers + 2 starts') : index == 1 ?
                         i18n.tr("5 numbers + 1 star") : index == 2 ?
                         i18n.tr("5 numbers + 0 stars") : index == 3 ?
@@ -56,15 +53,11 @@ Rectangle {
             }
         }
     ListView {
-            anchors{
-                top: prizeTable.top
-                left: prizeTable.left
-                right: prizeTable.right
-                bottom: prizeTable.bottom
-            }
-            model: euroMillionsPage.prizes_ListModel
+        width: wrapper.width
+        height: wrapper.height - units.gu(2)
+        model: euromillionsPlugin.prizes_ListModel
         delegate: tablePrizeDelegate
         focus: false
+        interactive: true
     }
 }
-        
