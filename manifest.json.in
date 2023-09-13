@@ -9,7 +9,7 @@
             "desktop":  "euromillionskeys.desktop"
         }
     },
-    "version": "3.0.0",
+    "version": "3.0.1",
     "maintainer": "Ivo Xavier <ivofernandes12@gmail.com>",
     "framework" : "@CLICK_FRAMEWORK@"
 }
