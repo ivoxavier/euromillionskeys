@@ -130,18 +130,15 @@ def get_euromillions_prizes():
                 soup = BeautifulSoup(f, 'html.parser')
                 main_div = (soup.find("div", {"class": "stripped betMiddle customfiveCol regPad"}))
                 jackpot_div = (soup.find("div", {"class": "betMiddle twocol"}))
-                prizes = []
+                prizes = [int(i.get_text().replace(".", "")) for i in main_div.find_all("li", {"class": "litleCol"})]
                 money_prizes = []
                 jackpot = []
-                for i in main_div.find_all("li", {"class": "litleCol"}):
-                        prizes.append(int(i.get_text().replace(".","")))
+        
                 for j in main_div.find_all("ul"):
-                        cleaned_money_prizes = "".join(str(j) for j in j.get_text().split(" "))
-                        cleaned_money_prizes =  re.sub('\s+', '', cleaned_money_prizes).partition("€")[-1] + "€"
+                        cleaned_money_prizes =  re.sub('\s+', '', "".join(str(j) for j in j.get_text().split(" "))).partition("€")[-1] + "€"
                         money_prizes.append(cleaned_money_prizes)
                 for k in jackpot_div.find_all("li", {"class": "stronger"}):
-                        cleaned_jackpot = "".join(str(k) for k in k.get_text().split(" "))
-                        cleaned_jackpot =  re.sub('\s+', '', cleaned_jackpot).partition("€")[-1].strip()+"€"
+                        cleaned_jackpot =  re.sub('\s+', '', "".join(str(k) for k in k.get_text().split(" "))).partition("€")[-1].strip()+"€"
                         jackpot.append(cleaned_jackpot)
                 del jackpot[0]
 
