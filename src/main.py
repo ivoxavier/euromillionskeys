@@ -35,42 +35,37 @@ def clean_dir():
         for files in to_clean_path:
             os.remove(files)
 
-def next_draw_date(draw_weekday1,draw_weekday2=None):
-        today_date_week_day = calendar.weekday(datetime.now().year, datetime.now().month, datetime.now().day) + 1
-        if draw_weekday2 is None:
-                #single day draw
-                is_draw_today = True if draw_weekday1 == today_date_week_day else False
-                if(is_draw_today):
-                        return 1
-                else:
-                        diff_days = draw_weekday1 - today_date_week_day
-                        if diff_days > 0:
-                                return ((datetime.today()) + timedelta(days=diff_days))\
-                                .strftime("%Y-%m-%d")
-                        else:
-                                return ((datetime.today()) + timedelta(days=(7-abs(diff_days))))\
-                                .strftime("%Y-%m-%d")
+def next_draw_date(draw_weekday1, draw_weekday2=None):
+    today_date = datetime.now()
+    today_date_week_day = today_date.weekday()
+    euromillions_draw_time = datetime.strptime("20:30:00", "%H:%M:%S").time()
+    
+    next_draw_date_euromillions = None
+
+    if today_date_week_day in [draw_weekday1, draw_weekday2] and today_date.time() >= euromillions_draw_time:
+        days_until_draw = 7
+    else:
+        days_until_draw = (draw_weekday1 - today_date_week_day + 7) % 7 if today_date_week_day != draw_weekday1 else 0
+
+    next_draw_date_euromillions = today_date + timedelta(days=days_until_draw)
+
+    #m1lhao is always on friday
+    m1lhao_day = 4
+    if today_date_week_day == m1lhao_day:
+        if today_date.time() >= euromillions_draw_time:
+            days_until_draw = 7
         else:
-                #two day draw
-                is_draw_today = True if draw_weekday1 == today_date_week_day or draw_weekday2 == today_date_week_day else False
-                if(is_draw_today):
-                        return 1
-                else:
-                        list_weekdays = [draw_weekday1,draw_weekday2]
-                        for weekday in list_weekdays:
-                                diff_days = weekday - today_date_week_day
-                                if diff_days > 0 and today_date_week_day < 2 :
-                                        return ((datetime.today()) + timedelta(days=diff_days))\
-                                        .strftime("%Y-%m-%d")
-                                elif diff_days > 0 and today_date_week_day > 2:
-                                        return ((datetime.today()) + timedelta(days=diff_days))\
-                                        .strftime("%Y-%m-%d")                                        
-                                elif diff_days < 0 and today_date_week_day < 5:
-                                        return ((datetime.today()) + timedelta(days=(3-abs(diff_days))))\
-                                        .strftime("%Y-%m-%d")
-                                else:
-                                        return ((datetime.today()) + timedelta(days=(4-abs(diff_days))))\
-                                        .strftime("%Y-%m-%d")
+            days_until_draw = 0
+    else:
+        days_until_draw = (m1lhao_day - today_date_week_day + 7) % 7
+
+    next_draw_date_m1lhao = today_date + timedelta(days=days_until_draw)
+
+    if next_draw_date_euromillions < next_draw_date_m1lhao:
+        return next_draw_date_euromillions.strftime("%Y-%m-%d")
+    else:
+        return next_draw_date_m1lhao.strftime("%Y-%m-%d")
+
 
 def get_euromillions_dom():
         url = "https://www.jogossantacasa.pt/web/SCCartazResult/euroMilhoes"

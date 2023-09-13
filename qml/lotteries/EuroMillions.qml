@@ -136,11 +136,11 @@ ColumnLayout{
                 })
         });
         backend.call('main.generate_key', [], function(returnValue) {list_key_gen = returnValue})
-        backend.call('main.next_draw_date', [2,5],
+        backend.call('main.next_draw_date', [1,4],
                 function(returnValue) {
                     returnValue == true ?
                     euromillionsPlugin.next_draw_day_euroMillions = i18n.tr("Today") : euromillionsPlugin.next_draw_day_euroMillions = returnValue})
-        backend.call('main.next_draw_date', [5],
+        backend.call('main.next_draw_date', [4],
                 function(returnValue) {
                     returnValue == true ?
                     euromillionsPlugin.next_draw_day_m1lhao = i18n.tr("Today") : euromillionsPlugin.next_draw_day_m1lhao = returnValue})           
