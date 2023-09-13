@@ -34,7 +34,7 @@ MainView {
     automaticOrientation: true
     backgroundColor : LomiriColors.porcelain
 
-    property var app_version : "3.0.0"
+    property var app_version : "3.0.1"
 
     width: units.gu(45)
     height: units.gu(75)
